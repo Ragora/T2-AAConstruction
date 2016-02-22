@@ -1,0 +1,275 @@
+Function.cs documantation - v3.5
+Created by DynaBlade
+==================================
+I dont mind if you use my scripts, as long as you say that 
+you are using them somewhere in the credits, say a webpage or a startup screen.
+IF YOU DO NOT KNOW HOW TO USE THIS FUNCTION LIBRARY DO NOT ASK ME! This is 
+provided as a library reference only! 
+All functions used here are made strictly by DynaBlade. 
+Functions made in the other attached files are made by their respective authors.
+
+
+TypeMasks
+---------
+$AllObjMask
+Every object in T2 falls under this category. Use this in your raycasts and 
+containerBox searches if you just want to find anything
+
+$DefaultLOSMask
+Basic mask, usually used with raycasting LOS
+
+$CoreObjectMask
+Players, Vehicles, Stations, Generators and Sensors fall in this category
+
+$EverythingObjectMask (not done)
+This includes everything, even projectiles and possibly GUI objects!
+
+ShapeBase Commands
+------------------
+These commands work on any object derived from ShapeBase. 
+
+%obj.getRotation()
+Gets the rotation of the object
+
+%obj.setRotation(%rot)
+Sets the object's rotation of to %rot
+
+%obj.setPosition(%pos)
+Sets the object's position to %pos
+
+%obj.getSlotRotation()
+Gets the rotation of a specific slot on an object
+
+%obj.getSlotPosition()
+Gets the position of a specific slot on an object
+
+%obj.zapObject()
+Plays Shocklance "zap" animation on object
+
+%obj.zap2Object()
+Plays a different "zap" animation on object
+
+%obj.stopZap()
+Stops the Shocklance "zap" animation prematurely
+(if you dont want it to fade out naturally)
+
+%obj.isPlayer()
+Checks to see if object is a Player Object
+
+%obj.isVehicle()
+Checks to see if object is a Vehicle Object
+
+%obj.applyKick(%force)
+Applys a kick based on the force inputted based on the muzzle vector. 
+If there is no muzzle, then it apply an impulse at "0 0 0" at the shape's 
+current forward position
+
+%obj.useEnergy(%amount)
+Uses %amount much energy assuming the shape has any
+
+%obj.play3D(sound)
+Plays sound from the object
+
+%obj.teleportStartFX()
+Teleportation fadeout used in Meltdown2
+
+%obj.teleportEndFX()
+Teleportation fadein used in Meltdown2
+
+%obj.getEyePoint()
+Usually used with Players, this gets the camera's current position
+
+%obj.getForwardRaycastPt(%dist)
+Similar to MuzzleRaycast, but this one gets the raycast in whatever your 
+forward direction is
+
+%obj.getEyeRaycastPt(%dist)
+Gets the camera's raycast from the scanning distance
+
+%obj.getMuzzleRaycastPt(%slot, %dist)
+Gets the muzzle's raycast from the object usind the slot and scanning distance
+
+%obj.getMass()
+Returns the mass of the object
+
+%obj.getAccel()
+Returns the acceleration of the object in 1 millisecond. If you want to get an 
+acceleration of say, 1 second, you would scale the output vector by the number 
+of miliseconds you want it to be, in this case, 1 second = 1000 milliseconds. So,
+
+%accel_1_second = vectorScale(%obj.getAccel(), 1000);
+
+%obj.getVelToForce()
+This converts the object's velocity to a force vector. This works sort of like a 
+setVelocity for vehicles, in that it outputs the vector ready to be applied to the object. 
+If you know what you're doing
+
+%obj.getMaxEnergy()
+Returns the datablock maximum energy the object has, if any
+
+%obj.getMaxDamage()
+Returns the datablock maximum damage the object has, if any
+
+%obj.getDamageLeft()
+Returns the object's health, or damage away from the maximum, if any
+
+%obj.getDamageLeftPct()
+Returns the percentage of non-damage on the object
+
+%obj.getDamagePct()
+Returns the percentage of damage on the object
+
+%obj.getEnergyPct()
+Returns the percentage of energy on the object
+
+%obj.getTransformAngle(%trans)
+Returns the transform's angle
+
+** EXPERIMENTAL FUNCTIONS **
+
+%obj.createSlotExtension(%obj, %slot)
+Creates 8 more mountable slots at the cost of 1 
+However, strange side effects seem to take place... You'd have to try this one out to see
+
+%obj.deleteSlotExtension(%obj, %slot);
+Deletes the current slot extension.
+
+isWithinVariance(%va, %vb, %variance)
+Tests vectors a and be to see if they are pointing within %variance direction
+I'm not sure if I have the math skill to figure this one out. So I copied something
+from inside T2's stuff that worked kinda like this.
+
+Normal Commands
+---------------
+
+combineVars(%a, %b, %c)
+Combines 3 variables together into 1 variable (ex. Position)
+
+killit(%k)
+same as %obj.delete()
+
+scanArea(%pos, %radius, %mask)
+scans for existance of %mask type objects in a %radius area starting from %pos position
+
+testPosition(%pos)
+Tests to see if you can move to this position
+
+createEmitter(%pos, %emitter, [%rot])
+Creates a particle emitter at %pos position and with particle emitter %emitter (rot is optional)
+
+createLifeEmitter(%pos, %emitter, %lifeMS, [%rot])
+This creates an emitter for %lifeMS time, if you dont want to have to worry 
+about deleting the particle emitter
+
+sqr(num)
+returns number*number
+
+cube(num)
+returns number*number*number
+
+modifyTransform(%trans1, %trans2)
+This modifys transform1 based on transform2
+For example: modifyTransform("255 100 96 1 0 0 1.57", "-255 0 4 -1 1 0 0");
+would output the transform "0 100 100 0 1 0 1.57"
+
+modifyTri(%trans1, %trans2)
+same as modifyTransform with 3 variables
+
+modifyQuad(%trans1, %trans2)
+same as modifyTransform with 4 variables
+
+shutdownServer(%time, %msg, %lines)
+Centerprints the text for %time amount of time and on %lines number of lines before
+the server shuts down
+
+velToSingle(%vel)
+Converts a 3-unit velocity vector to a single number constant
+
+msToKPH(%vel, true|false)
+Converts a single number constant (velToSingle) to KPH, and if bool = true, it will 
+not round off calculations.
+
+KPHToMPH(%vel, true|false)
+Converts a single number constant (velToSingle)from KPH to MPH, and if bool = true, it will 
+not round off calculations.
+
+vectorNeg(%vec)
+Returns the negative of the inputted vector
+
+vectorClear(%vec)
+Yes.... people may actually find this useful.. lol
+
+vectorCopy(%vec)
+Returns this vector (dont even ask why)
+
+vectorCompare(%veca, %vecb)
+Returns 1 if the vectors are the same or similar
+
+vectorToRotZ(%vec)
+Converts a vector to a Z rotation. Hey! I'm not that smart yet
+
+getLOSOffset(%obj, %vec, %dist)
+Returns a position from a vector and a distance.
+
+getVectorFromPoints(%a, %b)
+Returns the Normalized vector for pointa facing pointb
+
+getVectorFromObjects(%a, %b)
+Same as above, but with objects
+
+getDistance2D(%a, %b)
+Returns the distance between the 2 2-unit vectors
+
+getDistance3D(%ptA, %ptB)
+returns the distance between two positions
+
+getObjectDistance(%obj1, %obj2)
+returns the distance between 2 objects
+
+setFlightCeiling(height)
+Sets the mission's flight 'ceiling', or maximum distance 
+upwards before your engines/jets cut off
+
+reload(%script)
+This functions like exec, only it causes lag because it is loading all 
+the datablocks in the file you called this with to all the connected 
+clients on the server, and to the server itself. This function, along 
+with plain ol' exec will allow you to literally build your mod while 
+others play it!
+
+changeServerHostName(%name)
+Changes the name of server you are hosting, without need for reset.
+
+changeServerPlayerCount(%number)
+Changes the # of players your server can accept, without need for reset.
+
+changeServerAllowAliases(true|false)
+Changes the allow aliases switch while you are hosting, without need for reset.
+
+changeServerAdminPassword(%pass)
+Changes the server admin password, without need for reset.
+
+changeServerPassword(%name)
+Changes the entry password on server you are hosting, without need for reset.
+
+setServerPrefs(%name, %aliases, %admin, %password, %numplayers)
+Changes all of the above, but with one function
+
+getRandomN([%max, %min])
+Gets a random negative number, min and max values optional.
+
+getRandomB()
+Returns true or false, at random.
+
+getRandomT([%max, %min])
+Gets a positive OR negative random number at random will it be either
+Max and min values can be defined
+
+vectorRandom()
+Creates a vector pointing in any random 360*  direction
+
+==================================================================================
+Notes:
+Particle emitter rptation should work now, and is optional.
+Reload doesnt always load the full datablock, and I dont know why.
+I am not good at math :(

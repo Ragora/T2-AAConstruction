@@ -1,0 +1,17 @@
+Version 0.1: 
+ -Implemented basic response chat AI, expect it to increase in complexity as more versions are released
+ -Started Implementation of the projectile turret
+ -Upgraded switch code to support pack toggled switches (plus a disposal mode)
+ -Implemented Window Pack (Simplified forceFields basically)
+ -Improved many script efficiency errors that came with Construction .70 (Spelling Errors, script setup, console errors)
+ -Started Official mod map, which is yet to be named. (Right now is called "Starfallen Construction")
+ -Implemented deployable waypoint pack (Under "Packs")
+ -Implemented a scoreMenu chat command list system (type /help and see what I mean)
+ -Fixed Smurf Message when someone joins a LAN server
+ -Implemented my X-Library API
+ -Implemented Phantom139's "fixed" Construction Tool
+ -Implemented custom scoreMenu using the script from T2Bol mod
+ -Implemented Quantium format chat commands (for those old-school users)
+ -Implemented MANY chat commands (many of which have several aliases)
+ -Implemented the MIST by Electricutioner (Thyth) to replace the Modifier tool
+ -Implemented auto-buyfavorites upon exiting the inventory screen

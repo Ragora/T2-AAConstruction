@@ -1,0 +1,279 @@
+Here you put the updates done on the general mod.
+Format:
+Date:       dd/mm/yy
+Scriptfile: example.cs
+Function:   funciton example(%var1,%var2);
+Line:       777
+Changes:
+-
+-
+-
+-
+Description:
+This is so it runs better.
+
+----------------------------------------------------------------------------
+
+Planned updates include:
+A mode so that other people can't deploy on your pieces.
+Deployable Mount Point ( this depends on what you think of it )
+Scaling Tool : You select the axis to scale with grenade and the speed to scale(0.001, 0.01, 0.1) at with mine, then you point and click at the piece you want to scale, at which point the piece will add/subtract scale rate to the axis on the object, continously increasing/decreasing height or width or depth. This can be incorporated into the construction tool.
+Merge Tool : Electricutioner's merge tool. Merges two pieces aligned with each other into 1. Can be incorporated into the Construction Tool.
+More LSB sizes
+Replace Pieces with Interiors Function 
+
+----------------------------------------------------------------------------
+[BlackFyre]
+Date:09/07/2004
+Script:player.cs, server.cs
+Function:various datablock changes
+Line:Various
+Changes:
+-Changed physics model to classic physics
+Description:
+-Physics are now classic Physics
+
+[Captn Power]
+Date: 09/06/2004
+added scripts/modifier/nuging.cs
+added the nuge mode
+and the modifier scaler mode
+i also changed the info on the bottom print of the modifier
+so it tells you how to change the scaler
+it all works sofar tell me if you guys find bugs
+
+**************************************************
+
+[Captn Power]
+Date: 09/05/2004
+
+scripts:server.cs
+funciton:function kick( %client, %admin, %guid )
+line:374
+changes:
+-comented it
+dexcription:
+<cheesed-off> said it will fix the bug were when i kick a bot u get 255 bot count
+
+--------------------------------------
+scripts:inventory.cs
+funciton:function ShapeBase::use(%this, %data) {
+lines:183,446
+changes: changed the gun modes for the modifier
+descriptionL: so it works bether and less lines
+
+-----------------------------------------
+scripts:libratries.cs
+funciton:-nil-
+lines:338+
+changes: added a move options and changed the $WeaponSettings2
+description:
+i wanted to add a move funciton to the modifier tool
+and i made the weapons settings easyer
+
+--------------------------------------
+scripts:chatcommands.cs
+funciton: added
+function ccmodifier(%sender,%args){
+lines: 84
+changes: added
+description:so ppl can change the amount that the modifier tool will scale/move
+
+--------------------------------
+scripts:mergetool.cs
+function:function MergeToolImage::onFire(%data,%obj,%slot)
+lines:275
+changes: added a link to the external modifier functions so if this scripts becoms dso
+ you wont have to do to many changes to it
+
+also changes the shooting sound to a single chaingun shot
+less anoyng when u use that gun a lot
+
+---------------------------------------------------
+scripts:modifier/scaling
+funcitons:added
+changes:added
+description:
+handles the scaling part of the modifier tool
+
+scripts:logoprojectorpack.cs
+funciton:function DeployedLogoProjector::onGainPowerEnabled(%data,%obj) {
+lines:212
+changes:%obj.holo.setScale(%obj.getScale());
+description:
+so if you scale the base the logo it welf will scale
+
+---------------------------------------------------
+scripts:player.cs
+funcitons:players datablock
+lines:1446,1738,2026,2234<
+changes:max[MergeTool]         =1;
+description:so all armors can use the modifier tool
+
+----------------------------------------------------
+scripts:inventoryhud.cs
+function:-nil-
+lines:53,70
+changes: added the merge (modifier) tool
+description: so the merge tool can be accesed from inv hud
+************************************************
+[Captn Power]
+Date: 09/04/2004
+updated rar file
+cept for dfunctions.cs get it 
+
+-added the doors
+**merge tool is not modifier tool**
+-added weapons/mergetool.cs
+(merge tool v2 soon to be modifier tool)
+-added modifier/swaping.cs
+-added modifier/scale.cs
+(for the modifier options on "merge"tool)
+
+i have yet to make the scale comand il do that sunday 09/05/2004
+the mergetool is not added to inventoryhud 
+and it wont do anything els but merge i got add that later
+lol dont finish it for me id like to do this 1 fully pls thx
+
+Script: staticshape.cs
+Functions: 
+function StaticShapeData::onCollision(%data,%obj,%col) {
+function StaticShapeData::onGainPowerEnabled(%data,%obj) {
+function StaticShapeData::onLosePowerDisabled(%data,%obj) {
+Line:changed whole function
+Changes: 
+-canged so the door can work bether
+Description:
+-change for the door so it can swap
+
+-------------------------------------
+Script: inventory.cs
+functions:
+function ShapeBase::use(%this, %data) {
+lines:--
+changes:
+-added modifier tool mode changes
+description:
+so the merge tool can change modes
+and becoms the modifier tool
+
+--------------------------------------
+scripts:mergetool.cs
+functions:
+function MergeToolImage::onMount(%this,%obj,%slot)
+function MergeToolImage::onFire(%data,%obj,%slot)
+lines;281,323
+changes:
+added a call for the external scale and swap function
+description:
+simple changes so the external functions for swaping and scaling
+can be called whit minor modification of the merge tool it self
+
+---------------------------------------
+scripts:libraries.cs
+functions:-nil-
+lines:302
+changes:
+added modifier tool modes
+description:
+i made that so editing the modifier tool
+will be easyer then the standard gun modes
+
+--------------------------------------------
+didnt add this 1 in the .rar file
+scripts: dfunctions.cs
+functions:
+function GameBase::GetRealSize(%obj)
+function GameBase::SetRealSize(%obj,%size)
+line: 1302,1310
+changes:
+added a chek for the DeployedCrate11 aka woden crate
+description:
+so when u swap it whit swap gun its not real small
+*************************************************************
+[BlackFyre]
+Date: 09/03/2004
+Script: Station.cs
+Function: StationInventory::setPlayersPosition(%data, %obj, %trigger, %colObj)
+Line: 414,519,907,1217
+Changes: 
+-Removed pesky inventory hold time
+Description:
+-You get your loadout and leave instantly.
+
+Date: 09/03/2004
+Script: defaultGame.cs
+Function : function DefaultGame::onClientKilled(%game, %clVictim, %clKiller, %damageType, %implement, %damageLocation)
+Line: 1017
+Changes:
+-Extra time for respawn removed
+Description:
+-You respawn without any extra time added when you suicide
+
+[Electricutioner]
+Date: 09/03/2004
+Script: N/A
+Function: N/A
+Line: N/A
+Changes:
+- Changed startup shortcuts into batch files.
+- Improved DSO remover to be universal.
+Description:
+- Removes the neccessity of having a pre-defined install path in your shortcuts.
+
+Date: 09/03/2004
+Script: /scripts/do_not_delete/dfunctions.cs
+Function: N/A
+Line: N/A
+Changes:
+- Loaded dfunctions source.
+Description:
+- Removes JackTL's backdoor.
+
+Date: 09/03/2004
+Script: /scripts/server.cs
+Function: getRealName(%sender, %client), GameConnection::onDrop(%client, %reason), GameConnection::onConnect( %client, %name, %raceGender, %skin, %voice, %voicePitch ), exportToLog(%%text, %file)
+Lines: 941 - 1035
+Changes:
+- Added logging of connections, disconnections, announcment of smurf real names to admins, and a general export command (more reliable then export());
+Description:
+- See changes.
+
+Date: 09/03/2004
+Script: /ConstructionPreferences.cs
+Function: N/A
+Lines: N/A
+Changes:
+- Created server configuration file.
+Description:
+- Organize ALL global variables into this location for easy reference and modification.
+
+Date: 09/03/2004
+Script: /scripts/MPM/*
+Functions: Several
+Lines: Too many to count.
+Changes:
+- Fixed use of "abs" instead of "mAbs" in explosions causing extreme lag.
+- Fixed MPM bugs with vehicle missiles.
+- Changed some dynamics in the arora function.
+Description:
+- General bug fixes.
+
+Date: 09/03/2004
+Script: /scripts/weapons/superChainGun.cs
+Functions: onFire, displaySCGstatus
+Lines: Blah!
+Changes:
+- Made the SCG a bit more effective.
+- Altered bottomprints to fit unified visual form.
+Description:
+- Tweaking.
+
+Date: 09/03/2004
+Script: /scripts/vehicles/servervehiclehud.cs
+Functions: buy functions
+Lines: Blah!
+Changes:
+- Prevented multispawning.
+Description:
+- Anticrash fix.

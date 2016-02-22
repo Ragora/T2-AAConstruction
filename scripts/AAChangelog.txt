@@ -1,0 +1,13 @@
+This file contains technical data.
+Try not to fry your brain.
+**************************************
+
+[Dark Dragon DX]
+Date: 3:16 PM 11/29/2010
+Scripts: modScripts/chatCommands_public.cs, modScripts/chatCommands_admin.cs, modScripts/chatCommands_superAdmin.cs
+Functions: All
+Lines: All
+Changes:
+-Implemented various chat commands
+Description:
+-Many chat commands have been added, many of which have several aliases.

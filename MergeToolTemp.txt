@@ -1,0 +1,19 @@
+//--- OBJECT WRITE BEGIN ---
+new StaticShape() {
+	position = "-64.2835 -288.237 372.459";
+	rotation = "0.107068 0.992328 0.0618146 120.382";
+	scale = "1.25042 8.33293 1";
+	dataBlock = "DeployedSpine";
+	lockCount = "0";
+	homingCount = "0";
+
+	powerFreq = "1";
+	lastState = "0";
+	team = "1";
+	needsFit = "1";
+	Target = "-1";
+	powerCount = "0";
+	dObj = "14069";
+	Ownerguid = "2003098";
+};
+//--- OBJECT WRITE END ---

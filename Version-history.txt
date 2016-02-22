@@ -1,0 +1,1108 @@
+Latest changes added at top. To read chronologically,
+start from bottom.
+
+**********************0.69 Alpha**********************
+
+-Didn't update the version history all that good for 
+ certain reasons.
+
+-Construction Tool will now tell owner client id and 
+ object id when admins read it's power state.
+
+-Added Transport Missile Gun for traveling great distances 
+ quickly without much fuss. Custom travel time settable.
+
+-Added 4 'effect' packs.
+ All use expert and pack setting modes.
+ >Emitter pack, includes all particle emitters in t2. 
+ >Audio pack, includes all audio effects in t2. 
+ (so a few crap ones too).
+ >Pack Dispenser pack, includes most packs/weapons/ammo. 
+ >Detonation pack, enables along with satchel charges.
+ fxGroup, fx_emitters, fx_audio, fx_packs ".delete();"
+ will remove the effects spawned by the first 3 packs.
+ 
+-Added Deployable vehicle pad.
+ Requires a construction piece surface larger than 20x20 meters.
+ 2 step deploy: 1-Pad 2-station.
+
+-Added Multi purpose missile lauchers to the mpb. 
+ which can be enabled with "$mpm::nukempb = 1;"
+
+**
+
+-Fixed misc. other stuff.
+
+-Fixed tossing grenade/mine when toggling Construction
+ Tool or Super Chaingun grenade/mine modes too quickly.
+
+-Fixed meteors damaging items behind walls.
+
+-Fixed server always starting with Cascade mode enabled.
+
+-Repair Pack should now let players repair themselves
+ while inside Construction buildings..
+
+**********************0.68 Alpha**********************
+
+-Cascade mode and Vehicles on/off options are now separate
+ from Purebuild mode toggle, and saved separately in server
+ prefs file.
+
+-Repair Kit now works in non-Purebuild mode, with Expert
+ mode on.
+
+-Added admin menu item to toggle Invincible Deployables
+ mode.
+
+-Added Invincible Deployables mode.
+
+-When Invincible Armors mode is on, would-be damage is
+ displayed as a waypoint with a percentage of max damage
+ for that armor. Team damage is not shown if there are
+ multiple teams.
+
+-Added admin menu to remove all orphaned deployables
+ in the mission. This includes all deployables where
+ the owner is no longer in the game.
+
+-Added GUID owner tracking. Owner status is now saved
+ with buildings.
+
+ NB: GUID is not used by T2 in Solo/LAN games.
+
+-When a player is found spamming, anything deployed by
+ that player within the last 15 seconds is disassembled.
+ Can be changed with host variable.
+
+-Smartened up turrets multiple target selection code.
+
+-Fixed Missile Rack Turret's dumbfire/seeker mode not
+ saving.
+
+**********************0.67 Alpha**********************
+
+-Fixed Force Field damage handling with team damage off.
+
+-Construction Tool will now tell you who owns a piece
+ when you read it's power state.
+
+-Construction Mod updated to Tribes 2 v0.25034.0.0
+
+-Added "dumbfire" and "seeking" modes to Missile Rack
+ Turret pack Expert mode options. "seeking" mode drains
+ more energy.
+
+-Added Missile Rack Turret pack. This turret needs power
+ to function. 
+
+-Added "only transmit" and "only receive" modes to Telepad
+ Expert mode options.
+
+-Added "Timed turn off" and "Timed turn on" modes to
+ Tripwire pack Expert mode options.
+
+-Added "team only" and "any team" modes to Telepad
+ Expert mode options.
+
+-Added scale options to Tree pack Expert mode options.
+
+-Added new underground code.
+
+-Changed shape of Decoration pack.
+
+-Added new billboard shapes to Decoration pack.
+
+-Fixed Pulse Sensor not doing "deploy" anim when loaded.
+
+-Added admin menu item to enable/disable Underground mode.
+
+-Added "Only turn on" and "Only turn off" modes to
+ Tripwire pack Expert mode options.
+
+-Escape Pod should no longer be usable as an explosive
+ siege machine. :P
+
+-Added boost power setting to Escape Pod pack.
+
+-Escape Pods should no longer launch players underground.
+
+**********************0.666 Alpha**********************
+
+-Added Escape Pod pack.
+
+-Added Field mode to Tripwire pack.
+
+-Admins can now use Construction Tool on objects even if
+ they are not on the same team.
+
+-Admins can now rotate objects even if Only Owner
+ Rotate is enabled.
+
+-Added code to prevent players from crashing server by
+ falling from great height.
+
+-Walls/pads can now be deployed properly on the thin side of
+ other walls.
+
+-Added host variable $Host::NoAnnoyingVoiceChatSpam" to
+ let hosts prevent players from using the "null" voice
+ to spam sound effects. :P
+
+-Included Editor fix (stops it from enabling cheats) in
+ Construction Mod, since so many people like to play with
+ it while hosting. :p
+
+-Added Tripwire pack. Extra options are available in
+ Expert mode. Usage is similar to the Switch pack.
+
+-Fixed problem with auto-adjusting Medium Support Beam
+ scaling weird when deploying on terrain.
+
+-Added Expert mode sizes to Medium Support Beam.
+
+-New server variable "$Host::StationHoldTime" holds the
+ time in milliseconds that players are held when using
+ an inventory station.
+
+-Admins and Super Admins can now use power frequencies
+ 1 to 50, instead of the normal 1 to 40.
+
+-Fixed Satchel Charge, again. Oops!
+
+**********************0.65 Alpha**********************
+
+-Construction Mod updated to Tribes 2 v0.25026.0.0
+
+**********************0.64 Alpha**********************
+
+-Added new Ion effects.
+
+-Updated Force Field settings. This should hopefully give
+ some players higher FPS.
+
+-Added delayed reset mode to Switch, usable in Expert mode.
+
+-Added vote menu to enable/disable Expert mode.
+
+-Included new bat file, "JTLdelDSO.bat", in archive.
+
+ This batch file deletes all *.dso files in "..\base" and
+ the current directory (should be the Construction folder),
+ and all subfolders.
+
+ NB: It does not ask for confirmation before deleting files.
+     Use at your own risk. Tested under WinXP only.
+
+     Please use only if the other DSO deleters do not work
+     for you.
+
+-An object will now be destroyed if it is too damaged
+ when deconstructed.
+
+-Added message broadcast when a player takes control of
+ an object.
+
+-Reverted Satchel Charge pack image back to normal. Oops!
+
+**********************0.63 Alpha**********************
+
+-Lots of small fixes.
+
+-Changed how spam is punished.
+
+-Added new effects for deploying and deconstructing objects.
+
+-Added keyboard mappings for cycling pack settings forward,
+ backward, fast forward and fast backward.
+ Players must run the mod client-side to take advantage
+ of the new key bind options.
+
+-Added keyboard mappings for doing a jig, laying down,
+ heart attack and sucker punched.
+ Players must run the mod client-side to take advantage
+ of the new key bind options.
+
+-Added admin menu item to enable/disable "Only Owner
+ Cubic Replace mode", which will only let the creator of
+ an object cubic replace it.
+
+-Added admin menu item to enable/disable Cascade mode.
+
+-Made cascading deployables a mode separate from Purebuild
+ mode.
+
+-Added an easier function to relight mission client-side.
+ Clients can enter "reLightMission();" in console to light
+ their mission.
+
+-Added new "Builder Pack" entry to Inventory Hud. This
+ now contains most of the deployable packs.
+
+-Added admin menu item to enable/disable MTC mode.
+
+-Added MTC mode.
+
+-Changed Jump Pad deploy code.
+
+-Changes in Deployable Light. Any Light saved with v0.62a
+ can not be deconstructed when loaded in 0.63a.
+
+-Made Construction Mod packs available in inventory hud
+ again, at the cost of turret barrel packs.
+
+-Added Ion mode to Super Chaingun, using same controls as
+ Construction Tool.
+
+-Added light source to Hazard mode meteors.
+
+-Admins now get Super Chaingun when using Deployed Inventory
+ Station.
+
+-Telepad can no longer be rotated with Advanced Rotate.
+
+-Made Team Damage vote menu available in single-team games.
+
+-Deployed Camera and Prison Camera can now be controlled
+ in Purebuild mode.
+
+-Added key bind for selecting Jump Pad.
+
+**********************0.62 Alpha**********************
+
+-Fixed problem with Telepad not working past 10km altitude.
+ New limit is 100km.
+
+-Added keyboard mappings for sitting and squatting.
+ Players must run the mod client-side to take advantage
+ of the new key bind options.
+
+-Admins can now deconstruct objects even if Only Owner
+ Deconstruct is enabled. This includes cascade
+ deconstruction.
+
+-Added "wooden pad" to Light Support Beam pack.
+
+-Vehicles can now pass through disabled force fields.
+
+-Deconstructed objects' packs now appear at the end of
+ the Construction Tool's beam.
+
+-Added Deployable Light to savebuilding.cs.
+
+-Added Light Pack.
+
+-Fixed Switches affecting objects not on their own team.
+
+-Fixed problem with vehicle counts being off after
+ calling pureVehicles().
+
+-Added page cycling to vehicle selection hud.
+
+-Fixed server-side weapon reticles.
+
+-Changed Energizer explosion effect.
+
+-Energizer can not be deployed within 30 meters of an
+ enemy object.
+
+-Added Deployable Camera to savebuilding.cs.
+
+-Pure armor can now use Camera grenade.
+
+-Medium Support Beam ring options reversed. Rings can
+ now be enabled in Expert mode.
+
+-Construction Tool will now tell you who owns a piece if
+ you try to deconstruct a piece not belonging to you and
+ Only Owner Deconstruct is enabled.
+
+-If Purebuild mode is off, Satchel Charge warning messages
+ are only sent to the player's team.
+
+-Tweaked Energizer. It now only affects Heavy armor,
+ gives less recharge boost, and is destroyed more easily.
+
+-Generator now takes 100% of damage from Force Field,
+ not just 75%.
+
+-Medium armor can now carry barrel packs again.
+
+-Added Deployable Turret Base, Clamp Turret and Landspike
+ Turret to savebuilding.cs.
+
+-Deployed turrets no longer damage deployables on their
+ own team.
+
+-Fixed problem with Light Walkway modes in Expert mode.
+
+-Max vehicles per team reset to base values for
+ non-Purebuild mode.
+
+-Added base Pulse Sensor and Motion Sensor deployables
+ to savebuilding.cs.
+
+-Added Super Wildcat and Super Havoc vehicles. Only
+ available in Purebuild mode.
+
+-Note that in some cases, the pack-list may be too long
+ to display properly in the inventory selection hud.
+ The new QuickPack entries should alleviate this problem
+ until a fix is done.
+
+-Added QuickPack entries for most Construction packs.
+ Players must run the mod client-side to take advantage
+ of the new key bind options.
+
+-Made Construct come out of his box for a while.
+
+-Spider Clamp turret can now be deployed on most
+ Construction deployables.
+
+-Turrets can no longer be controlled in Purebuild mode, except
+ by Admin.
+
+-Pure armor can now carry Flare grenade, turret barrel packs,
+ Base Turret pack, Pulse and Motion sensor packs, Clamp
+ and Landspike turret packs.
+
+-Fixed cubic replace exploit.
+
+-Added new Medium Sensor and Large Sensor to savebuilding.cs.
+
+-Added new Medium Sensor and Large Sensor packs.
+
+**********************0.61 Alpha**********************
+
+-Many small fixes.
+
+-Switches are now half the size of normal base switches.
+
+-Reverted all vehicles to base values.
+
+-Added "Construction" gametype script for Construction
+ missions.
+
+-Added warning sound to deployable spam warning message.
+
+-Reworked part of generator object handling in savebuilding.cs.
+
+-Force Field slow-down can now be toggled in Expert mode.
+
+-Construction Tool now overrides Grenade and Mine
+ release - not the other way around.
+
+-Force Field now kills any players caught in it when
+ powering up.
+
+-Medium Floor can now only be deployed on terrain, interior
+ and Medium Floor shapes in non-Purebuild mode. This change
+ only applies to Purebuild mode when Hazard mode is on.
+
+-Construction Tool, "Read power frequency" mode renamed
+ to "Read power state" mode. It now shows how many power
+ sources are powering an item as well as it's power frequency.
+
+-Deployables that require power from Generator objects
+ now have a greater recharge rate when when powered by
+ more than one Generator.
+
+-Added colours to admin menu.
+
+-Added admin menu item to enable/disable Hazard mode.
+
+-Added Hazard mode for hazardous construction.
+
+**********************0.60 Alpha**********************
+
+-A short list of server options now appear in players
+ Message Hud on when they join the game.
+
+-Added Switch pack. Touching it will toggle on or off
+ all power objects in range, that are on the same team
+ and same power frequency. Beacon key sets range.
+
+-Fixed deployed item count being wrong after destroying
+ a large cluster of pieces.
+
+-Significantly reduced lag when cascading large structures.
+
+-Solar Panel now face upwards when deployed on
+ slopes.
+
+-Added Logo Projector pack. The logo is selected with beacon
+ key. In non-Purebuild mode, only the player's team logo is
+ available. The projector needs power to operate.
+
+-Added Decoration pack with 12 different decoration items.
+ Any object deployed on statue base will snap to the top,
+ in center, and upright. Any statue deployed on statue
+ base will snap to statue base rotation as well.
+
+-Inventory stations will no longer snap player to center
+ if used underground.
+
+-Advanced Rotate will no longer rotate an object entirely
+ underground.
+
+-Rotate functions are no longer available in Construction
+ Tool in non-Purebuild mode.
+
+-Generator and Solar Panel objects now store their on/off
+ state when saved.
+
+**********************0.59 Alpha**********************
+
+-Fixed Telepad teleporting underground exploit.
+
+-Added $ModVersion and $ModCredits global variables to hold
+ mod version and credits strings. Modders re-modding
+ Construction Mod should change the these strings at top of
+ "server.cs".
+
+-Saved buildings now store the version of Construction Mod
+ their are saved with.
+
+-Added admin menu to load saved buildings. To stay server-
+ side, this menu is listed under "Change the Mission", as
+ " - Load Building File - " game type. File menu will list
+ last 10 auto-saved files provided they are in an unbroken
+ sequence from 0 and up, and also any "*.cs" files stored
+ under "Buildings/Admin/*".
+
+-Changed shape of Telepad and reworked Telepad code. Added
+ new power up effect and sounds.
+
+ Note: All Telepads in saved buildings from previous versions
+ will be broken. This can be fixed by either turning them
+ upside-down by hand or redeploying them.
+
+-Generator and Solar Panel objects now show their power
+ frequency and switch state when looked at.
+
+-Added admin menu to re-evaluate power for all deployables
+ in the mission. This is needed in case power system becomes
+ corrupted, after loading a building for example.
+
+-Added admin menu to remove all deployables in the mission
+ without power. This is intended as an aid in removing spam.
+ Generator and Solar Panel objects are listed in Commander Hud,
+ and any other deployables can be removed with this function.
+
+ Note that this function only removes objects outside the
+ "power zone" of any power object. No checks for power frequency
+ or team is made. It is intended as a tool to remove spam
+ outside "populated" areas only.
+
+-Added Power Panagement mode to Construction Tool. Also fixed
+ timing issues with the different Tool modes.
+
+-Added power frequencies for generators and powered objects.
+ Power frequency is set by either using beacon key before
+ deploying generator object, or using Power Panagement mode of
+ Construction Tool. Any powered object deployed by player
+ will use that frequency until power frequency is changed,
+ or player dies.
+
+-Players will no longer be allowed to spawn with "illegal"
+ equipment if they have a non-existent armor in favourites.
+
+-Changed vote for "No Time Limit" to set time to one week,
+ instead of 200 minutes.
+
+-Fixed issues with players being unable to use weapons
+ and backpacks if the inventory station they are in is
+ deconstructed.
+
+-Armor limitations enforced. For non-admins, only Pure
+ armor is available in Purebuild mode, and Pure armor is
+ not available in non-Purebuild mode.
+
+-Fixed issues with Advanced Rotate list in Construction
+ Tool.
+
+-Fixed Energizer code not working right when throwing
+ Energizer pack, or leaving Energizer coverage while
+ carrying Energizer pack.
+
+-When rotating a Large Inventory Station, the trigger
+ object is now moved as well.
+
+-Rewrote much of Telepad code. Added teleport
+ emitter.
+
+-Fixed Telepad pack not showing in hud.
+
+-Force Field and Gravity Field will now disappear
+ instantly after being deployed if there is no power
+ source available. Already deployed fields will power
+ down, but not disappear, if they lose power.
+
+-Added new Generator and Solar Panel to savebuilding.cs.
+
+-Added new Generator and Solar Panel packs. Force Field,
+ Gravity Field, Large Inventory Station and shielded
+ objects now require power to operate. Generator powers
+ items within a 100 meter radius. Solar Panel powers items
+ within a 50 meter radius.
+
+ Deployable Generator and Solar Panel do not power normal
+ base objects, and normal base generators do not power
+ deployables.
+
+ When a Force Field or Gravity Field is damaged, it will absorb
+ 25 percent of the damage and evenly distribute the remaining
+ 75 percent among Generator and Solar Panel units that power it,
+ draining shields and causing damage.
+
+-Tree pack can now be deployed close to another Tree, or on
+ another Tree. Most deployables can be deployed on it. The same
+ goes for Crate pack as well.
+
+-Added new Crate pack with 13 different decorative crates.
+
+-Fixed Construction Tool creating a pack even if cascade
+ deconstruction failed.
+
+-Fixed Force Field and Gravity Field objects not rotating
+ properly with the Construction Tool.
+
+-Fixed Deployable Base Turret pack not showing in hud.
+
+-Cleaned up Energizer code.
+
+ Note: All saved buildings that contain energizers must
+ change all instances of "DeployedVampire" to
+ "DeployedEnergizer" to load the energizers.
+
+-Cascading deconstruction now deconstructs objects
+ normally, without exploding them.
+
+-Player sensors reverted to base values.
+
+-Fixed Medium Floor pack not showing in hud.
+
+**********************0.58 Alpha**********************
+
+-10000 meter Light Support Beam in Expert mode changed
+ to 4000 meters.
+
+-Trees will now align with slope of the surface they are
+ deployed on.
+
+-Tree pack now has 14 different tree types, selectable
+ with beacon key.
+
+-Fastfields removed from Gravity Field pack because they
+ could be used to hang server.
+
+-Pulse and Motion sensors are now available for Medium
+ and Heavy armors, like in base Tribes 2.
+
+-Light Walkway double width or height can now be toggled
+ in Expert mode.
+
+-Fixed Medium Support Beam pack not showing in hud.
+
+-Telepads now show their frequency setting when looked at.
+
+-Player using Telepad should now only hear one teleport
+ sound.
+
+-Added 4 meter Medium Support Beam.
+
+-Turrets will no longer fire automatically in Purebuild
+ mode.
+
+**********************0.57 Alpha**********************
+
+-Medium Support Beam rings can now be disabled in
+ Expert mode.
+
+-Inventory Stations now deploy correctly on flat surfaces,
+ facing the player.
+
+-Telepad's beam shortened to fit under 4m ceilings.
+
+-Many internal changes and fixes.
+
+-Saved/loaded upside-down deployed Station Inventories
+ released the player wrongly. Fixed.
+
+-Fixed the way force field and gravity field padding was
+ added in cubic replace mode.
+
+-Updated the kind of packs different armors can carry.
+
+-Added new gravity fields to savebuilding.cs.
+
+-Added new Gravity Field pack with options. Field auto
+ adjusts up to 500m "upwards", and can be deployed at
+ any angle.
+
+-Force Fields will now deconstruct properly when cascade
+ option is enabled.
+
+**********************0.56 Alpha**********************
+
+-Deployables now link to the center of the surface if
+ they are larger than the surface.
+
+-Medium Support Beams now have 7 options: 1 meter,
+ 8 meter, 40 meter, 160 meter, auto adjusting, no rings
+ and platformrings. The last two modes are auto adjusting.
+
+-Telepads and Large Inventory Stations should now place
+ the player correctly even when placed upside down.
+
+-Jump Pads are now directional. Place them on walls for
+ horizontal jumps.
+
+-Deployables that deconstruct to packs should no longer
+ spawn inside walls if the deployable was deployed
+ upside down or against a wall.
+
+-Added boost strength options to Jump Pad.
+
+-Number of deployable Force Fields per team increased
+ to 100.
+
+-"Remove All Duplicate Deployables" and "Remove All
+ Deployables In Mission" admin options will no longer
+ function until the previous operation has finished.
+
+-Added admin menu to remove all duplicate deployables
+ in the mission.
+
+-Light Walkway now has a "No-flicker" mode selectable
+ in Expert mode. This micro-adjusts the position of
+ the Walkway to avoid Z-buffer flicker.
+
+-Blast Wall now has 4 options. Deploy from inside,
+ from outside, in frame, or "full protection".
+ A "Multiple Blast Walls" mode can be selected in
+ Expert mode.
+
+-Medium Floor is now set to use one height. Pack
+ button now changes floor width, for easy "padding"
+ of large areas. Height of Medium Floor can be changed
+ in Expert mode.
+
+-Added "Cubic Replace" mode to Force Field pack in
+ Expert mode. In this mode any cubic shape can be
+ replaced with a Force Field.
+
+-Added admin menu item to enable/disable Expert mode.
+
+-Added Expert Mode, which enables more pack options for
+ some deployables, usable with Repair Kit key.
+
+-Pieces will no longer cascade when destroyed in
+ Purebuild mode.
+
+-Added new Medium Floor and Light Walkway snap-to code,
+ developed by Mostlikely.
+
+-Deployed Large Station Inventories are now deleted
+ when they are destroyed. Normal Station Inventories
+ behave as normal.
+
+-Added telepads to savebuilding.cs.
+
+-Telepads no longer malfunction. They will always work,
+ until they are destroyed.
+
+-Rewrote Telepad pack. Should always work when there
+ is another telepad to teleport to.
+
+-Added admin menu item to enable/disable "Only Owner
+ Rotate mode", which will only let the creator of
+ an object rotate it.
+
+-Added admin menu item to enable/disable "Only Owner
+ Cascade mode", which will only let the creator of
+ an object cascade deconstruct it.
+
+-Added new Construction Tool, developed by Mostlikely.
+ This tool has 3 modes, each with several submodes:
+ * deconstruct
+   - normal
+   - cascading
+ * rotate
+   - pull
+   - push
+ * advanced Rotate
+   - select target as center of rotation
+   - select objects to rotate
+   - select rotation speed
+   - apply rotation
+   - display selection
+   - clear list
+
+ Mine key selects main mode, grenade key selects
+ submode.
+
+ Player can not select main mode or submode while carrying
+ mines or grenades.
+
+-Removed Deconstructor Gun.
+
+-Added entirely new rotation and deployment code,
+ developed by Mostlikely.
+
+-Inventory list rearranged to find deployables easier.
+
+**********************0.55 Alpha**********************
+
+-Force Field pack now detects other force fields when
+ finding size.
+
+-Rearranged and grouped admin and vote menu items.
+
+-Added admin menu item to enable/disable "Only Owner
+ Deconstruct mode", which will only let the creator of
+ an object deconstruct it.
+
+-Medium Floors now have 5 different height options:
+ 1.5 meter, 5 meter, 10 meter, 20 meter and 40 meter.
+ Default is 20 meter.
+
+-Only player-deployed Station Inventories can now be
+ deconstructed.
+
+**********************0.54 Alpha**********************
+
+-If Satchel charges are disabled, they can no longer be
+ detonated, even if thrown before they were disabled.
+
+-Super Admins can now give admin rights to players, even
+ if $Host::allowAdminPlayerVotes is enabled.
+
+-Jump Pad now only boosts once.
+
+-Added new forcefields to savebuilding.cs.
+
+-Made force field pads slightly larger than the normal
+ pad size. This will stop flickering where they border
+ with other deployables, like Light Support Beams.
+
+-Made it impossible to deploy inside or through a
+ force field.
+
+-Added new Force Field pack with deconstructible force
+ field pad.
+
+ Force Field pack has 21 modes:
+ 3 groups: solid, team-pass, all-pass.
+ 7 colours in each group: white, red, green, blue,
+ cyan, magenta, yellow.
+
+ Number in mode change message shows number of changes
+ required to reach next group. Example:
+ "(4) Force field set to solid blue" means 4 mode changes
+ are needed to reach team-pass group.
+
+-Shocklance weapon reverted to base functionality.
+
+-Fixed the way deploying of Light Support Beam pads
+ inside fames greater than max pad width is handled.
+
+-A big cleanup in deployables code.
+
+-Thrown items 'melt' time changed from 30 to 60 seconds.
+
+-Packs left from deconstructed items will now 'melt' if
+ left for too long, just like normal thrown items.
+
+-Added cams for team 0 (observer), 1 and 2 to let players
+ observe inmates through Commander Hud.
+
+-Replaced a missing function in prison.cs. Oops!
+
+**********************0.53 Alpha**********************
+
+-Put in an extra safery check to prevent objects from
+ disappearing randomly. This /should/ have been handled
+ by the game engine.
+
+-Fixed problem with Light Support Beams sometimes
+ deploying at extremely weird angles when deployed
+ on other funky Light Support Beams.
+
+-Increased accuracy in some rotations by 2 decimal
+ spaces. Should fix those annoying inaccuracies when
+ working on larger projects.
+
+-Plasma and Chaingun reverted to base values.
+
+**********************0.52 Alpha**********************
+
+-Fixed Medium Floor rotations being off by 90 deg when
+ deploying on another Medium Floor.
+
+-Max size of Light Support Beam pads changed to
+ 160 x 160 meters.
+
+-Touched up prison.cs. New host prefs options. Fixed
+ lighting issue.
+
+-Changed wording associated with the enabling/disabling
+ vehicles admin menu to be more clearly understandable.
+
+-All turret barrels reverted to normal. They will no
+ longer blow you and/or your building away from halfway
+ across the mission. ;)
+
+-Added admin menu item to enable/disable nerf weapons.
+
+-Pure armor now has same physical properties as Light,
+ except energy drain, recharge rate, jet force and
+ impact damage velocity.
+
+-Reverted all armors to base values.
+
+-Energizers no longer detonate on contact in Purebuild
+ mode.
+
+-Items do no longer animate on deconstruction. This should
+ fix nearly all the lag issues with cascading deconstruction.
+
+-Medium Floors changed from 8 x 8 to 8.5 x 8.5 meters
+ to fit "circle-deployed" 8 meter Light Support Beams.
+
+-Construction Mod deployables now use bottomPrint to
+ show pack mode changes.
+
+**********************0.51 Alpha**********************
+
+-Jumpads can now be deconstructed.
+
+-Jumpads are now static shapes, not items.
+ Note, if you have any saved structures with jump pads
+ in them, you must replace all instances of
+ "new Item()" with "new StaticShape()" in the save file.
+
+-Nerf guns are now available in Purebuild mode.
+
+-Loaded Medium Support Beams now no longer take down all
+ the deployables in the mission when they are destroyed.
+
+**********************0.50 Alpha**********************
+
+-New maintainer; JackTL.
+
+-Tightened up "security" in Purebuild mode. Only Pure
+ armor available in Purebuild mode, unless you're admin
+ or super admin. Pure armor can not use satchel charges.
+ Pure armor is still available in non-Purebuild mode,
+ though.
+
+-Pure armors can pilot vehicles.
+
+-Added admin menu item to pure/unpure vehicles.
+
+-Added admin menu item to toggle Invincible Armors.
+
+-Satchel Charge now tells everyone who dropped it.
+
+-Added Satchel Charge enable/disable control to admin menu.
+
+-Restored Team Damage vote and admin menu, added a separate
+ Purebuild menu item.
+
+-Disabling Purebuild no longer clears all deployables
+ in a mission. A new admin menu item replaces this
+ functionality.
+
+-Purebuild mode is now saved and loaded with server prefs.
+
+-Added save building script. Hosts only. Only usable
+ from console, for now. See scripts/savebuilding.cs for
+ details and help.
+
+-Medium Floors restored. New texture.
+
+-Light Blast Walls are stronger.
+
+-Added 1.5 and 4 meter beams to Light Support Beam pack.
+
+-New shape for Light Support Beam pack (so far). Watch those
+ busy fireflies buzz about! ;)
+
+-Tweaked armor impact damage values back to base levels.
+
+-Tweaked player sensors to have a huuuge radius,
+ and ignore LOS. Handy for people with waypoint scripts.
+ I may remove this if it causes lag. Shouldn't be a problem
+ with the small number of players usually in a single
+ Construction server.
+
+-Added nerf guns, with optional dance/death anims and
+ optional jail mode. 'Paintball' games!
+
+-Added nerf gun options to admin menu.
+
+-Added Super Chaingun, for demolition work. Only available
+ to admins. Automatically given at use of inventory station.
+ It may cause a bit of lag on large structures; use in bursts.
+
+-Plascannon now does double damage in blast radius. Added direct-
+ hit damage similar to mortar blast. Easier removal of spam,
+ without the randomness of the mortar.
+
+-Chaingun now does x4 damage, and has a tighter spread cone.
+ Easier pin-point removal of spammy items, especially mid-air
+ pieces.
+
+ Note that the above weapon changes may go away if enough people
+ complain. If you host your own server, you can remove the changes
+ by deleting "plasma.cs" and "chaingun.cs" from your
+ "Construction\scripts\weapons" folder.
+
+-Added prison feature, for auto-punishing TK's and deployables
+ spammers, and to let admins deal with troublemakers without
+ kicking them. Handy for damage control when a n00b joins the game,
+ and you want him/her somewhere safe and not blowing up stuff while
+ you explain the point of the mod.
+
+ Currently, non-auto prison is only available through console:
+ jailPlayer(clientId,release[1/0],time);
+
+ Settings are saved with "prefs/ServerPrefs.cs" - no need to change
+ "prison.cs".
+
+-Added prison option to admin menu.
+ Note that if prison is added mid-mission, it will not be
+ lit (no lighting).
+
+-Admins can rain down a hail of fire on naughty players.
+ This can be very laggy if buildings are involved. Only
+ available through console (must be host), for now.
+ Type "JTLMeteorStrike();" in console for help, or see the
+ script file.
+
+-Added female and bioderm pure armors.
+
+-Increased Repair Gun range to 250 meters.
+
+-Fixed some typos.
+
+-Made other small changes.
+
+**********************0.48 Alpha**********************
+
+-Added the purebuild feature.
+
+***Construct***
+
+-Included my spiffy DSO remover DOS batch file.
+
+-Fixed the deconstructor chat hud spam? (I thought I did)
+
+-Added the banana peel Glockenspeil.
+
+**********************0.47 Alpha**********************
+
+-Added deployable large inv stations
+
+-Added an non cascading deoncstruction patch under protest.
+ If this is in the full version of the mod then contact me.
+
+-Improved deploying on things
+
+-Fixed the num-deployed resest bug.
+
+**********************0.46 Alpha**********************
+
+-Improved deploying by alot.
+
+-Gave deployables to correct armor sizes.
+
+-Added Deconstruction gun.
+
+-Added Load screen.
+
+-Added remote vehicle controlling
+
+-Added Medium Floor.
+
+-Fixed Energizer.
+
+-Fixed the Jumpad.
+
+-Improved the telleporter.
+
+-Removed useless parts (until futher notice)
+
+**********************\/ Pre-Alpha versions \/**********************
+
+-Added Deployable base turret.
+
+-Added Forcefields.
+
+-Added Telleport.
+
+-Added Medium Spine.
+
+-Fixed the blastwall.
+
+-Some more I can't remember.
+
+**********************Mostlikely*********************************
+
+-Remove BlastWall (until futher notice)
+
+-Added Upward collapsing
+
+-Added Destruction Debriss
+
+-Added Deconstruction Gun
+
+-Added spine swithing
+
+-Added credits list
+
+-Added versionhistory list
+
+-Added Todo-list
+
+-Added 90degrees walkways
+
+-Changed some vehicle stats [Construct]
+
+-Improved deploy flexibility (won't be buggy)
+
+-Improved downwards sloping walkways
+
+-Fixed the jump pad. (isn't needed since you have infi jet, so just don't use these indoors ;D )
+
+-Fixed the (beacon) switching to match your pack.
+
+**********************Construct********************************
+
+-Fixed inventory hud lower case words for "bunker", "walkway".
+
+-Repairpack works again and with a 15m increase in range for now(testing).
+
+-Jump pack deployed image changed to "nexusbase.dts".
+
+-Increased deployable walls, and beams to 700 (I ran out with just me making something).
+
+-Jetpack particles enhanced.
+
+-Marked some random scripts with !!!!STOP LOOK AT ME!!! [mostlikely]
+
++I think that is all.
+
+
+************************Mostlikely*****************************
+
+-Added Walk ways
+
+-Added walk ways sloping feature with beacon switching.
+
+
+
+************************Before that****************************
+
+Uhhhmm... dunno... if you'r looking for anything... just read the readme.txt
